@@ -56,7 +56,7 @@ for its environment to work correctly.
 1. Now you can work inside the directory of the XCSoar source, e.g. 
 compiling it:
     ```shell script
-    docker run -it --rm -w /src -v $PWD:/src:delegated sandrinr/docker-xcsoar-buildenv make OPENGL=n ENABLE_SDL=y
+    docker run -it --rm -w /src -v $PWD:/src:delegated sandrinr/xcsoar-buildenv make OPENGL=n ENABLE_SDL=y
     ```
    The `-w /src -v $PWD:/src:delegated` is important for the image to work and
    have access to your XCSoar source.
@@ -65,7 +65,7 @@ compiling it:
 server installed and the `socat` command from above running, then XCSoar should
 show up on your host machine.
     ```shell script
-    docker run -it --rm -w /src -v $PWD:/src:delegated sandrinr/docker-xcsoar-buildenv output/UNIX/bin/xcsoar
+    docker run -it --rm -w /src -v $PWD:/src:delegated sandrinr/xcsoar-buildenv output/UNIX/bin/xcsoar
     ```
 
 
